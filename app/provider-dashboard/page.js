@@ -305,7 +305,7 @@ function ProviderDashboardContent() {
                           <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">New</span>
                         </div>
                         <p className="text-gray-700">
-                          Hi! I'm interested in enrolling my 8-year-old daughter in your art workshop. Could you tell me
+                          Hi! I&apos;m interested in enrolling my 8-year-old daughter in your art workshop. Could you tell me
                           more about the materials needed?
                         </p>
                         <Button variant="outline" size="sm" className="mt-3 bg-transparent">
@@ -321,7 +321,7 @@ function ProviderDashboardContent() {
                           </div>
                         </div>
                         <p className="text-gray-700">
-                          Thank you for the wonderful art class! My son really enjoyed it and can't wait for next week.
+                          Thank you for the wonderful art class! My son really enjoyed it and can&apos;t wait for next week.
                         </p>
                         <Button variant="outline" size="sm" className="mt-3 bg-transparent">
                           Reply

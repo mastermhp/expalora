@@ -109,7 +109,7 @@ export default function NotificationsPage() {
             <CardContent>
               <Bell className="h-16 w-16 text-gray-300 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No notifications</h3>
-              <p className="text-gray-600">You're all caught up! Check back later for updates.</p>
+              <p className="text-gray-600">You&apos;re all caught up! Check back later for updates.</p>
             </CardContent>
           </Card>
         ) : (

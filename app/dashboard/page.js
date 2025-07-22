@@ -64,7 +64,7 @@ function UserDashboardContent() {
           <div className="flex items-center justify-between">
             <div className="animate-fadeInUp">
               <h1 className="text-3xl font-bold text-gray-900">Welcome back, {user?.name}!</h1>
-              <p className="text-gray-600 mt-2">Discover and manage your family's activities</p>
+              <p className="text-gray-600 mt-2">Discover and manage your family&apos;s activities</p>
             </div>
             <div className="flex items-center gap-4">
               <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent">
@@ -308,7 +308,7 @@ function UserDashboardContent() {
                               ))}
                             </div>
                           </div>
-                          <p className="text-gray-600 italic">"{activity.review}"</p>
+                          <p className="text-gray-600 italic">&quot;{activity.review}&quot;</p>
                         </div>
                       ))}
                     </div>

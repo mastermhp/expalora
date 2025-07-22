@@ -28,11 +28,11 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 At Expalora, we believe that learning and growth happen best when people can easily discover and connect
-                with enriching activities in their local communities. We're bridging the gap between passionate
+                with enriching activities in their local communities. WeIt&apos;re bridging the gap between passionate
                 educators, skilled instructors, and families seeking meaningful experiences.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Whether you're a parent looking for after-school programs, a student seeking new skills, or an adult
+                Whether youIt&apos;re a parent looking for after-school programs, a student seeking new skills, or an adult
                 wanting to explore creative hobbies, Expalora makes it simple to find and join activities that inspire
                 and educate.
               </p>
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Passion</h3>
                 <p className="text-gray-600">
-                  We're passionate about connecting people with activities that spark joy and foster personal growth.
+                  WeIt&apos;re passionate about connecting people with activities that spark joy and foster personal growth.
                 </p>
               </CardContent>
             </Card>
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
             <p className="text-lg leading-relaxed mb-6">
               Meanwhile, talented instructors and passionate educators struggled to reach their ideal students, often
-              relying on limited marketing channels that didn't showcase the full value of their offerings.
+              relying on limited marketing channels that didnIt&apos;t showcase the full value of their offerings.
             </p>
 
             <p className="text-lg leading-relaxed mb-6">
@@ -137,7 +137,7 @@ export default function AboutPage() {
 
             <p className="text-lg leading-relaxed">
               Today, Expalora serves thousands of families and hundreds of activity providers across multiple cities,
-              creating connections that enrich lives and strengthen communities. We're just getting started on our
+              creating connections that enrich lives and strengthen communities. WeIt&apos;re just getting started on our
               mission to make quality local activities accessible to everyone.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
           <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Meet Our Team</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're a passionate team dedicated to connecting communities through learning
+              WeIt&apos;re a passionate team dedicated to connecting communities through learning
             </p>
           </div>
 

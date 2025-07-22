@@ -62,7 +62,7 @@ export default function FavoritesPage() {
         {/* Header */}
         <div className="mb-8 animate-fadeInUp">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">My Favorites</h1>
-          <p className="text-gray-600">Activities you've saved for later</p>
+          <p className="text-gray-600">Activities you&apos;ve saved for later</p>
         </div>
 
         {favorites.length === 0 ? (

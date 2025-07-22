@@ -17,7 +17,7 @@ export default function ContactPage() {
             Get in <span className="gradient-text">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-slideInLeft">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            WeIt&apos;d love to hear from you. Send us a message and weIt&apos;ll respond as soon as possible.
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-                      <p className="text-gray-600 mb-2">Send us an email and we'll get back to you within 24 hours.</p>
+                      <p className="text-gray-600 mb-2">Send us an email and weIt&apos;ll get back to you within 24 hours.</p>
                       <a
                         href="mailto:info@expalora.com"
                         className="text-orange-500 hover:text-orange-600 font-semibold"
@@ -177,7 +177,7 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">How do I list my activity on Expalora?</h3>
                 <p className="text-gray-600">
-                  Simply click "List Your Activity" in the header, fill out our easy form with your activity details,
+                  Simply click It &quot;List Your Activity&quot; in the header, fill out our easy form with your activity details,
                   and our team will review and approve your listing within 24-48 hours.
                 </p>
               </CardContent>
