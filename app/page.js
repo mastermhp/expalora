@@ -78,12 +78,12 @@ export default function HomePage() {
                     <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-200 h-5 w-5 " />
                     <Input
                       placeholder="Enter city or zip"
-                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="pl-10 border-2 border-gray-200 text-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
                 </div>
                 <div className="relative">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">School Name (Optional)</label>
+                  <label className="block text-sm font-semibold text-gray-200 mb-3">School Name (Optional)</label>
                   <Input
                     placeholder="Enter school name"
                     className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
@@ -103,19 +103,19 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 animate-slideInRight">
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-500 mb-2">500+</div>
-              <div className="text-gray-600">Activities</div>
+              <div className="text-gray-200">Activities</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-500 mb-2">50+</div>
-              <div className="text-gray-600">Cities</div>
+              <div className="text-gray-200">Cities</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-500 mb-2">10K+</div>
-              <div className="text-gray-600">Happy Families</div>
+              <div className="text-gray-200">Happy Families</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-500 mb-2">200+</div>
-              <div className="text-gray-600">Providers</div>
+              <div className="text-gray-200">Providers</div>
             </div>
           </div>
         </div>
