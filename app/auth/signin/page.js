@@ -62,7 +62,11 @@ export default function SignInPage() {
       <div className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div className="text-center animate-fadeInUp">
-            <h2 className="text-4xl font-bold text-gray-900 mb-2">Welcome back!</h2>
+            <div className="flex items-center justify-center gap-4 mb-8">
+              {/* <h2 className="text-4xl font-bold text-gray-900 mb-2">Join </h2> */}
+              <img src="/lg.jpeg" className="w-32 h-32 border border-orange-500 rounded-full" />
+            </div>
+            {/* <h2 className="text-4xl font-bold text-gray-900 mb-2">Welcome back!</h2> */}
             <p className="text-gray-600">Sign in to your Expalora account</p>
           </div>
 
@@ -128,7 +132,7 @@ export default function SignInPage() {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="pl-10 p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                       required
                     />
                   </div>
@@ -143,7 +147,7 @@ export default function SignInPage() {
                       placeholder="Enter your password"
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="pl-10 pr-10 p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                       required
                     />
                     <button
