@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 to-white py-20">
+      <section className="bg-gradient-to-br from-coral-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fadeInUp">
             About <span className="gradient-text">Expalora</span>
@@ -61,8 +61,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover-scale animate-fadeInUp">
               <CardContent className="p-8">
-                <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <Users className="h-8 w-8 text-orange-500" />
+                <div className="bg-coral-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Users className="h-8 w-8 text-coral-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Community First</h3>
                 <p className="text-gray-600">
@@ -145,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-orange-50">
+      <section className="py-20 bg-coral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Meet Our Team</h2>
@@ -163,7 +163,7 @@ export default function AboutPage() {
                   className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Sarah Mitchell</h3>
-                <p className="text-orange-500 font-medium mb-4">Founder & CEO</p>
+                <p className="text-coral-500 font-medium mb-4">Founder & CEO</p>
                 <p className="text-gray-600">
                   Former educator with 10+ years of experience connecting families with learning opportunities.
                 </p>
@@ -178,7 +178,7 @@ export default function AboutPage() {
                   className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">David Chen</h3>
-                <p className="text-orange-500 font-medium mb-4">Head of Technology</p>
+                <p className="text-coral-500 font-medium mb-4">Head of Technology</p>
                 <p className="text-gray-600">
                   Tech enthusiast focused on building user-friendly platforms that make a real difference.
                 </p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
                   className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Maria Rodriguez</h3>
-                <p className="text-orange-500 font-medium mb-4">Community Manager</p>
+                <p className="text-coral-500 font-medium mb-4">Community Manager</p>
                 <p className="text-gray-600">
                   Community builder passionate about creating meaningful connections between learners and educators.
                 </p>

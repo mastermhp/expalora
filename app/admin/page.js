@@ -80,7 +80,7 @@ function AdminDashboardContent() {
       <Header />
 
       {/* Dashboard Header */}
-      <section className="bg-white shadow-sm py-8">
+      <section className="bg-white shadow-sm py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="animate-fadeInUp">
@@ -90,7 +90,7 @@ function AdminDashboardContent() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button className="bg-coral-500 hover:bg-coral-600 text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Add Category
               </Button>
@@ -120,7 +120,7 @@ function AdminDashboardContent() {
           </Card>
           <Card className="animate-fadeInUp" style={{ animationDelay: "0.2s" }}>
             <CardContent className="p-6 text-center">
-              <DollarSign className="h-8 w-8 text-orange-500 mx-auto mb-2" />
+              <DollarSign className="h-8 w-8 text-coral-500 mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">$24,580</div>
               <div className="text-sm text-gray-600">Monthly Revenue</div>
               <div className="text-xs text-green-600 mt-1">+15% this month</div>
@@ -146,7 +146,7 @@ function AdminDashboardContent() {
                     onClick={() => setActiveTab("overview")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "overview"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -157,7 +157,7 @@ function AdminDashboardContent() {
                     onClick={() => setActiveTab("listings")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "listings"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -171,7 +171,7 @@ function AdminDashboardContent() {
                     onClick={() => setActiveTab("users")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "users"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -182,7 +182,7 @@ function AdminDashboardContent() {
                     onClick={() => setActiveTab("categories")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "categories"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -227,9 +227,9 @@ function AdminDashboardContent() {
                         </div>
                         <div className="text-sm text-gray-500">4 hours ago</div>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
+                      <div className="flex items-center justify-between p-4 bg-coral-50 rounded-lg">
                         <div className="flex items-center gap-3">
-                          <Calendar className="h-5 w-5 text-orange-500" />
+                          <Calendar className="h-5 w-5 text-coral-500" />
                           <div>
                             <div className="font-semibold text-gray-900">Listing pending review</div>
                             <div className="text-sm text-gray-600">Advanced Photography Workshop needs approval</div>
@@ -274,7 +274,7 @@ function AdminDashboardContent() {
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-gray-600">Revenue Growth</span>
-                          <span className="font-semibold text-orange-600">+15%</span>
+                          <span className="font-semibold text-coral-600">+15%</span>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-gray-600">User Retention</span>
@@ -308,7 +308,7 @@ function AdminDashboardContent() {
                   <CardContent>
                     <div className="space-y-4">
                       {pendingListings.map((listing) => (
-                        <Card key={listing.id} className="border-l-4 border-l-orange-500">
+                        <Card key={listing.id} className="border-l-4 border-l-coral-500">
                           <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                               <div>
@@ -426,7 +426,7 @@ function AdminDashboardContent() {
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle>Activity Categories</CardTitle>
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                      <Button className="bg-coral-500 hover:bg-coral-600 text-white">
                         <Plus className="h-4 w-4 mr-2" />
                         Add Category
                       </Button>
@@ -435,7 +435,7 @@ function AdminDashboardContent() {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {categories.map((category) => (
-                        <Card key={category.id} className="border-l-4 border-l-orange-500">
+                        <Card key={category.id} className="border-l-4 border-l-coral-500">
                           <CardContent className="p-4">
                             <div className="flex items-center justify-between mb-2">
                               <h3 className="font-semibold text-gray-900">{category.name}</h3>

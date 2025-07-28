@@ -59,7 +59,7 @@ function UserDashboardContent() {
       <Header />
 
       {/* Dashboard Header */}
-      <section className="bg-white shadow-sm py-8">
+      <section className="bg-white shadow-sm py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="animate-fadeInUp">
@@ -67,11 +67,11 @@ function UserDashboardContent() {
               <p className="text-gray-600 mt-2">Discover and manage your family&apos;s activities</p>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent">
+              <Button variant="outline" className="border-coral-500 text-coral-500 hover:bg-coral-50 bg-transparent">
                 <Bell className="h-4 w-4 mr-2" />
                 Notifications
               </Button>
-              <Button variant="outline" className="border-gray-300 hover:border-orange-500 bg-transparent">
+              <Button variant="outline" className="border-gray-300 hover:border-coral-500 bg-transparent">
                 <Settings className="h-4 w-4 mr-2" />
                 Settings
               </Button>
@@ -87,7 +87,7 @@ function UserDashboardContent() {
             <Card className="sticky top-24">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-coral-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <img
                       src={user?.avatar || "/placeholder.svg"}
                       alt={user?.name}
@@ -103,7 +103,7 @@ function UserDashboardContent() {
                     onClick={() => setActiveTab("favorites")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "favorites"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -114,7 +114,7 @@ function UserDashboardContent() {
                     onClick={() => setActiveTab("bookings")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "bookings"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -125,7 +125,7 @@ function UserDashboardContent() {
                     onClick={() => setActiveTab("history")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "history"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -136,7 +136,7 @@ function UserDashboardContent() {
                     onClick={() => setActiveTab("profile")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "profile"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -154,7 +154,7 @@ function UserDashboardContent() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <Card className="animate-fadeInUp">
                 <CardContent className="p-6 text-center">
-                  <Heart className="h-8 w-8 text-orange-500 mx-auto mb-2" />
+                  <Heart className="h-8 w-8 text-coral-500 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900">12</div>
                   <div className="text-sm text-gray-600">Favorites</div>
                 </CardContent>
@@ -188,7 +188,7 @@ function UserDashboardContent() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
-                      <Heart className="h-5 w-5 mr-2 text-orange-500" />
+                      <Heart className="h-5 w-5 mr-2 text-coral-500" />
                       Your Favorite Activities
                     </CardTitle>
                   </CardHeader>
@@ -218,7 +218,7 @@ function UserDashboardContent() {
                                   <span>{activity.schedule}</span>
                                 </div>
                                 <div className="flex items-center justify-between mt-2">
-                                  <span className="font-semibold text-orange-500">{activity.price}</span>
+                                  <span className="font-semibold text-coral-500">{activity.price}</span>
                                   <div className="flex items-center">
                                     <Star className="h-3 w-3 text-yellow-400 fill-current" />
                                     <span className="text-xs ml-1">{activity.rating}</span>
@@ -334,7 +334,7 @@ function UserDashboardContent() {
                         <input
                           type="text"
                           defaultValue={user?.name}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                         />
                       </div>
                       <div>
@@ -342,7 +342,7 @@ function UserDashboardContent() {
                         <input
                           type="email"
                           defaultValue={user?.email}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -353,7 +353,7 @@ function UserDashboardContent() {
                         type="text"
                         defaultValue={user?.location}
                         placeholder="Enter your preferred location for activities"
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                       />
                     </div>
 
@@ -362,7 +362,7 @@ function UserDashboardContent() {
                       <div className="flex flex-wrap gap-3">
                         {["Kids (5-12)", "Teens (13-17)", "Adults (18+)", "All Ages"].map((age) => (
                           <label key={age} className="flex items-center">
-                            <input type="checkbox" className="mr-2 text-orange-500" />
+                            <input type="checkbox" className="mr-2 text-coral-500" />
                             <span className="text-sm">{age}</span>
                           </label>
                         ))}
@@ -370,7 +370,7 @@ function UserDashboardContent() {
                     </div>
 
                     <div className="pt-4">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-white">Save Changes</Button>
+                      <Button className="bg-coral-500 hover:bg-coral-600 text-white">Save Changes</Button>
                     </div>
                   </CardContent>
                 </Card>

@@ -210,7 +210,7 @@ export default function BrowsePage() {
       <Header />
 
       {/* Search Header */}
-      <section className="bg-white shadow-sm py-8">
+      <section className="bg-white shadow-sm py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Search Bar */}
@@ -221,7 +221,7 @@ export default function BrowsePage() {
                   placeholder="Search activities, providers, or locations..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 pr-4 py-3 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="pl-12 pr-4 py-3 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                 />
                 {searchQuery ? (
                   <Button
@@ -241,7 +241,7 @@ export default function BrowsePage() {
               <Button
                 variant="outline"
                 onClick={() => setShowFilters(!showFilters)}
-                className="border-gray-300 hover:border-orange-500"
+                className="border-gray-300 hover:border-coral-500"
               >
                 <Filter className="h-4 w-4 mr-2" />
                 Filters
@@ -252,7 +252,7 @@ export default function BrowsePage() {
                   variant={viewMode === "grid" ? "default" : "ghost"}
                   size="sm"
                   onClick={() => setViewMode("grid")}
-                  className={viewMode === "grid" ? "bg-orange-500 text-white" : ""}
+                  className={viewMode === "grid" ? "bg-coral-500 text-white" : ""}
                 >
                   <Grid className="h-4 w-4" />
                 </Button>
@@ -260,7 +260,7 @@ export default function BrowsePage() {
                   variant={viewMode === "list" ? "default" : "ghost"}
                   size="sm"
                   onClick={() => setViewMode("list")}
-                  className={viewMode === "list" ? "bg-orange-500 text-white" : ""}
+                  className={viewMode === "list" ? "bg-coral-500 text-white" : ""}
                 >
                   <List className="h-4 w-4" />
                 </Button>
@@ -268,7 +268,7 @@ export default function BrowsePage() {
                   variant={viewMode === "map" ? "default" : "ghost"}
                   size="sm"
                   onClick={() => setViewMode("map")}
-                  className={viewMode === "map" ? "bg-orange-500 text-white" : ""}
+                  className={viewMode === "map" ? "bg-coral-500 text-white" : ""}
                 >
                   <Map className="h-4 w-4" />
                 </Button>
@@ -294,7 +294,7 @@ export default function BrowsePage() {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">Category</label>
                 <select
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   value={filters.category}
                   onChange={(e) => handleFilterChange("category", e.target.value)}
                 >
@@ -311,7 +311,7 @@ export default function BrowsePage() {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">Age Group</label>
                 <select
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   value={filters.ageGroup}
                   onChange={(e) => handleFilterChange("ageGroup", e.target.value)}
                 >
@@ -329,7 +329,7 @@ export default function BrowsePage() {
                   <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <Input
                     placeholder="Enter city or zip code"
-                    className="pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 </div>
               </div> */}
@@ -338,7 +338,7 @@ export default function BrowsePage() {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">Price Range</label>
                 <select
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   value={filters.priceRange}
                   onChange={(e) => handleFilterChange("priceRange", e.target.value)}
                 >
@@ -354,7 +354,7 @@ export default function BrowsePage() {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">Minimum Rating</label>
                 <select
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   value={filters.rating}
                   onChange={(e) => handleFilterChange("rating", e.target.value)}
                 >
@@ -365,7 +365,7 @@ export default function BrowsePage() {
                 </select>
               </div>
 
-              {/* <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Apply Filters</Button> */}
+              {/* <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white">Apply Filters</Button> */}
             </div>
           </div>
 
@@ -373,7 +373,7 @@ export default function BrowsePage() {
           <div className="flex-1">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-2xl font-bold text-gray-900">{filteredActivities.length} Activities Found</h1>
-              {/* <select className="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+              {/* <select className="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-coral-500 focus:border-transparent">
                 <option>Sort by Relevance</option>
                 <option>Sort by Rating</option>
                 <option>Sort by Price (Low to High)</option>
@@ -401,7 +401,7 @@ export default function BrowsePage() {
                         <Heart className="h-6 w-6 text-white hover:text-red-500 cursor-pointer transition-colors" />
                       </div>
                       <div className="absolute bottom-4 left-4">
-                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-coral-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                           {activity.category}
                         </span>
                       </div>
@@ -414,7 +414,7 @@ export default function BrowsePage() {
                       )}
                       {activity.isPopular && (
                         <div className="absolute top-4 left-4">
-                          <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="bg-coral-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                             POPULAR
                           </span>
                         </div>
@@ -444,9 +444,9 @@ export default function BrowsePage() {
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-xl font-bold text-orange-500">{activity.priceDisplay}</span>
+                        <span className="text-xl font-bold text-coral-500">{activity.priceDisplay}</span>
                         <Link href={`/activity/${activity.id}`}>
-                          <Button className="bg-orange-500 hover:bg-orange-600 text-white">View Details</Button>
+                          <Button className="bg-coral-500 hover:bg-coral-600 text-white">View Details</Button>
                         </Link>
                       </div>
                     </CardContent>
@@ -508,9 +508,9 @@ export default function BrowsePage() {
                             </div>
                           </div>
                           <div className="flex items-center justify-between">
-                            <span className="text-xl font-bold text-orange-500">{activity.priceDisplay}</span>
+                            <span className="text-xl font-bold text-coral-500">{activity.priceDisplay}</span>
                             <Link href={`/activity/${activity.id}`}>
-                              <Button className="bg-orange-500 hover:bg-orange-600 text-white">View Details</Button>
+                              <Button className="bg-coral-500 hover:bg-coral-600 text-white">View Details</Button>
                             </Link>
                           </div>
                         </div>

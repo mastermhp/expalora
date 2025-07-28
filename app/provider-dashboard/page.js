@@ -42,7 +42,7 @@ function ProviderDashboardContent() {
       <Header />
 
       {/* Dashboard Header */}
-      <section className="bg-white shadow-sm py-8">
+      <section className="bg-white shadow-sm py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="animate-fadeInUp">
@@ -51,7 +51,7 @@ function ProviderDashboardContent() {
                 Welcome back, {user?.name}! Manage your activities and connect with learners
               </p>
             </div>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button className="bg-coral-500 hover:bg-coral-600 text-white">
               <Plus className="h-4 w-4 mr-2" />
               Create New Activity
             </Button>
@@ -78,7 +78,7 @@ function ProviderDashboardContent() {
           </Card>
           <Card className="animate-fadeInUp" style={{ animationDelay: "0.2s" }}>
             <CardContent className="p-6 text-center">
-              <DollarSign className="h-8 w-8 text-orange-500 mx-auto mb-2" />
+              <DollarSign className="h-8 w-8 text-coral-500 mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">$1,240</div>
               <div className="text-sm text-gray-600">Monthly Revenue</div>
             </CardContent>
@@ -98,7 +98,7 @@ function ProviderDashboardContent() {
             <Card className="sticky top-24">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-coral-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <img
                       src={user?.avatar || "/placeholder.svg"}
                       alt="Provider"
@@ -114,7 +114,7 @@ function ProviderDashboardContent() {
                     onClick={() => setActiveTab("listings")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "listings"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -125,7 +125,7 @@ function ProviderDashboardContent() {
                     onClick={() => setActiveTab("analytics")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "analytics"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -136,7 +136,7 @@ function ProviderDashboardContent() {
                     onClick={() => setActiveTab("messages")}
                     className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                       activeTab === "messages"
-                        ? "bg-orange-100 text-orange-700 font-semibold"
+                        ? "bg-coral-100 text-coral-700 font-semibold"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
@@ -157,7 +157,7 @@ function ProviderDashboardContent() {
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <CardTitle>My Activity Listings</CardTitle>
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                      <Button className="bg-coral-500 hover:bg-coral-600 text-white">
                         <Plus className="h-4 w-4 mr-2" />
                         Add New Activity
                       </Button>
@@ -166,7 +166,7 @@ function ProviderDashboardContent() {
                   <CardContent>
                     <div className="space-y-4">
                       {myListings.map((listing) => (
-                        <Card key={listing.id} className="border-l-4 border-l-orange-500">
+                        <Card key={listing.id} className="border-l-4 border-l-coral-500">
                           <CardContent className="p-6">
                             <div className="flex items-center justify-between mb-4">
                               <div>
@@ -261,9 +261,9 @@ function ProviderDashboardContent() {
                         <div className="text-sm text-gray-600">New Bookings</div>
                         <div className="text-xs text-green-600 mt-1">+8% this month</div>
                       </div>
-                      <div className="text-center p-6 bg-orange-50 rounded-lg">
-                        <Star className="h-8 w-8 text-orange-500 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-orange-600">4.8</div>
+                      <div className="text-center p-6 bg-coral-50 rounded-lg">
+                        <Star className="h-8 w-8 text-coral-500 mx-auto mb-2" />
+                        <div className="text-2xl font-bold text-coral-600">4.8</div>
                         <div className="text-sm text-gray-600">Avg Rating</div>
                         <div className="text-xs text-green-600 mt-1">+0.2 this month</div>
                       </div>
@@ -302,7 +302,7 @@ function ProviderDashboardContent() {
                             <h4 className="font-semibold text-gray-900">Sarah Johnson</h4>
                             <p className="text-sm text-gray-500">2 hours ago</p>
                           </div>
-                          <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">New</span>
+                          <span className="bg-coral-100 text-coral-800 px-2 py-1 rounded-full text-xs">New</span>
                         </div>
                         <p className="text-gray-700">
                           Hi! I&apos;m interested in enrolling my 8-year-old daughter in your art workshop. Could you tell me

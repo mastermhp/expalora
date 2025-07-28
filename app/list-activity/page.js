@@ -48,7 +48,7 @@ export default function ListActivityPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-500 to-orange-600 text-white py-16">
+      <section className="bg-gradient-to-br from-coral-500 to-coral-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeInUp">Share Your Amazing Activity</h1>
           <p className="text-xl opacity-90 mb-8 animate-slideInLeft">
@@ -66,14 +66,14 @@ export default function ListActivityPage() {
                 <div
                   className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all ${
                     currentStep >= step.number
-                      ? "bg-orange-500 border-orange-500 text-white"
+                      ? "bg-coral-500 border-coral-500 text-white"
                       : "border-gray-300 text-gray-400"
                   }`}
                 >
                   {step.number}
                 </div>
                 <div className="ml-4 hidden md:block">
-                  <div className={`font-semibold ${currentStep >= step.number ? "text-orange-500" : "text-gray-400"}`}>
+                  <div className={`font-semibold ${currentStep >= step.number ? "text-coral-500" : "text-gray-400"}`}>
                     {step.title}
                   </div>
                   <div className="text-sm text-gray-500">{step.description}</div>
@@ -81,7 +81,7 @@ export default function ListActivityPage() {
                 {index < steps.length - 1 && (
                   <div
                     className={`hidden md:block w-24 h-0.5 mx-8 ${
-                      currentStep > step.number ? "bg-orange-500" : "bg-gray-300"
+                      currentStep > step.number ? "bg-coral-500" : "bg-gray-300"
                     }`}
                   ></div>
                 )}
@@ -105,7 +105,7 @@ export default function ListActivityPage() {
                     placeholder="e.g., Creative Kids Art Workshop"
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 </div>
 
@@ -116,7 +116,7 @@ export default function ListActivityPage() {
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                     rows={6}
-                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent resize-none"
                   />
                 </div>
 
@@ -129,7 +129,7 @@ export default function ListActivityPage() {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     >
                       <option value="">Select a category</option>
                       {categories.map((category) => (
@@ -148,7 +148,7 @@ export default function ListActivityPage() {
                     <select
                       value={formData.ageRange}
                       onChange={(e) => setFormData({ ...formData, ageRange: e.target.value })}
-                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     >
                       <option value="">Select age range</option>
                       {ageRanges.map((range) => (
@@ -169,7 +169,7 @@ export default function ListActivityPage() {
                     placeholder="e.g., Downtown Community Center, 123 Main St, City, State"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function ListActivityPage() {
                     value={formData.schedule}
                     onChange={(e) => setFormData({ ...formData, schedule: e.target.value })}
                     rows={4}
-                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent resize-none"
                   />
                 </div>
 
@@ -201,7 +201,7 @@ export default function ListActivityPage() {
                     placeholder="e.g., $45/class, $120/month, Free"
                     value={formData.price}
                     onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 </div>
 
@@ -210,7 +210,7 @@ export default function ListActivityPage() {
                   <textarea
                     placeholder="Any additional details about requirements, materials needed, cancellation policy, etc."
                     rows={4}
-                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent resize-none"
                   />
                 </div>
               </div>
@@ -224,11 +224,11 @@ export default function ListActivityPage() {
                     <Camera className="inline h-4 w-4 mr-2" />
                     Upload Photos *
                   </label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-orange-500 transition-colors">
+                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-coral-500 transition-colors">
                     <Upload className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                     <p className="text-lg text-gray-600 mb-2">Drag and drop your photos here</p>
                     <p className="text-sm text-gray-500 mb-4">or click to browse files</p>
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-white">Choose Files</Button>
+                    <Button className="bg-coral-500 hover:bg-coral-600 text-white">Choose Files</Button>
                   </div>
                   <p className="text-sm text-gray-500 mt-2">
                     Upload at least 3 high-quality photos showing your activity in action. Maximum 10 photos.
@@ -237,13 +237,13 @@ export default function ListActivityPage() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">Video (Optional)</label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-orange-500 transition-colors">
+                  <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-coral-500 transition-colors">
                     <Upload className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                     <p className="text-lg text-gray-600 mb-2">Upload a video showcasing your activity</p>
                     <p className="text-sm text-gray-500 mb-4">Maximum 2 minutes, MP4 format preferred</p>
                     <Button
                       variant="outline"
-                      className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent"
+                      className="border-coral-500 text-coral-500 hover:bg-coral-50 bg-transparent"
                     >
                       Choose Video
                     </Button>
@@ -260,11 +260,11 @@ export default function ListActivityPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Input
                       placeholder="Your Name or Organization"
-                      className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     />
                     <Input
                       placeholder="Your Title/Role"
-                      className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export default function ListActivityPage() {
                   <textarea
                     placeholder="Tell people about your background, experience, and what makes you passionate about this activity..."
                     rows={4}
-                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                    className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent resize-none"
                   />
                 </div>
 
@@ -291,7 +291,7 @@ export default function ListActivityPage() {
                         value="email"
                         checked={formData.contactMethod === "email"}
                         onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })}
-                        className="w-4 h-4 text-orange-500"
+                        className="w-4 h-4 text-coral-500"
                       />
                       <label htmlFor="email" className="text-lg">
                         Email
@@ -305,7 +305,7 @@ export default function ListActivityPage() {
                         value="phone"
                         checked={formData.contactMethod === "phone"}
                         onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })}
-                        className="w-4 h-4 text-orange-500"
+                        className="w-4 h-4 text-coral-500"
                       />
                       <label htmlFor="phone" className="text-lg">
                         Phone
@@ -319,7 +319,7 @@ export default function ListActivityPage() {
                         value="internal"
                         checked={formData.contactMethod === "internal"}
                         onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })}
-                        className="w-4 h-4 text-orange-500"
+                        className="w-4 h-4 text-coral-500"
                       />
                       <label htmlFor="internal" className="text-lg">
                         Internal messaging through Expalora
@@ -332,7 +332,7 @@ export default function ListActivityPage() {
                   <Input
                     placeholder="Your email address"
                     type="email"
-                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 )}
 
@@ -340,7 +340,7 @@ export default function ListActivityPage() {
                   <Input
                     placeholder="Your phone number"
                     type="tel"
-                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 )}
               </div>
@@ -360,7 +360,7 @@ export default function ListActivityPage() {
               {currentStep < 4 ? (
                 <Button
                   onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg"
+                  className="bg-coral-500 hover:bg-coral-600 text-white px-8 py-3 text-lg"
                 >
                   Next Step
                 </Button>
@@ -374,23 +374,23 @@ export default function ListActivityPage() {
         </Card>
 
         {/* Help Section */}
-        <Card className="mt-8 bg-orange-50 border-orange-200">
+        <Card className="mt-8 bg-coral-50 border-coral-200">
           <CardContent className="p-6">
-            <h3 className="text-lg font-semibold text-orange-800 mb-3">Need Help?</h3>
-            <p className="text-orange-700 mb-4">
+            <h3 className="text-lg font-semibold text-coral-800 mb-3">Need Help?</h3>
+            <p className="text-coral-700 mb-4">
               Our team reviews all listings to ensure quality and safety. Your activity will be live within 24-48 hours
               after approval.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 variant="outline"
-                className="border-orange-500 text-orange-500 hover:bg-orange-100 bg-transparent"
+                className="border-coral-500 text-coral-500 hover:bg-coral-100 bg-transparent"
               >
                 View Listing Guidelines
               </Button>
               <Button
                 variant="outline"
-                className="border-orange-500 text-orange-500 hover:bg-orange-100 bg-transparent"
+                className="border-coral-500 text-coral-500 hover:bg-coral-100 bg-transparent"
               >
                 Contact Support
               </Button>

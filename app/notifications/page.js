@@ -60,8 +60,8 @@ export default function NotificationsPage() {
       time: "1 day ago",
       read: true,
       icon: Calendar,
-      color: "text-orange-500",
-      bgColor: "bg-orange-50",
+      color: "text-coral-500",
+      bgColor: "bg-coral-50",
     },
   ])
 
@@ -96,7 +96,7 @@ export default function NotificationsPage() {
             <Button
               variant="outline"
               onClick={markAllAsRead}
-              className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent"
+              className="border-coral-500 text-coral-500 hover:bg-coral-50 bg-transparent"
             >
               <Check className="h-4 w-4 mr-2" />
               Mark All as Read
@@ -120,7 +120,7 @@ export default function NotificationsPage() {
                 <Card
                   key={notification.id}
                   className={`transition-all duration-300 hover:shadow-md animate-fadeInUp ${
-                    !notification.read ? "border-l-4 border-l-orange-500 bg-orange-50/30" : ""
+                    !notification.read ? "border-l-4 border-l-coral-500 bg-coral-50/30" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -134,7 +134,7 @@ export default function NotificationsPage() {
                           <h3 className={`font-semibold ${!notification.read ? "text-gray-900" : "text-gray-700"}`}>
                             {notification.title}
                             {!notification.read && (
-                              <span className="ml-2 w-2 h-2 bg-orange-500 rounded-full inline-block"></span>
+                              <span className="ml-2 w-2 h-2 bg-coral-500 rounded-full inline-block"></span>
                             )}
                           </h3>
                           <div className="flex items-center gap-2 ml-4">
@@ -160,7 +160,7 @@ export default function NotificationsPage() {
                               variant="outline"
                               size="sm"
                               onClick={() => markAsRead(notification.id)}
-                              className="text-orange-500 border-orange-200 hover:bg-orange-50 bg-transparent"
+                              className="text-coral-500 border-coral-200 hover:bg-coral-50 bg-transparent"
                             >
                               <Check className="h-3 w-3 mr-1" />
                               Mark as Read
@@ -189,7 +189,7 @@ export default function NotificationsPage() {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -202,7 +202,7 @@ export default function NotificationsPage() {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -213,7 +213,7 @@ export default function NotificationsPage() {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -224,12 +224,12 @@ export default function NotificationsPage() {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                 />
               </div>
             </div>
             <div className="mt-6">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white">Save Preferences</Button>
+              <Button className="bg-coral-500 hover:bg-coral-600 text-white">Save Preferences</Button>
             </div>
           </CardContent>
         </Card>

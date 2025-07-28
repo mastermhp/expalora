@@ -72,7 +72,7 @@ export default function FavoritesPage() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No favorites yet</h3>
               <p className="text-gray-600 mb-6">Start exploring activities and save your favorites here</p>
               <Link href="/browse">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white">Browse Activities</Button>
+                <Button className="bg-coral-500 hover:bg-coral-600 text-white">Browse Activities</Button>
               </Link>
             </CardContent>
           </Card>
@@ -108,7 +108,7 @@ export default function FavoritesPage() {
                     </Button>
                   </div>
                   <div className="absolute bottom-4 left-4">
-                    <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-coral-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {activity.category}
                     </span>
                   </div>
@@ -137,12 +137,12 @@ export default function FavoritesPage() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xl font-bold text-orange-500">{activity.price}</span>
+                    <span className="text-xl font-bold text-coral-500">{activity.price}</span>
                     <span className="text-xs text-gray-500">Added {activity.addedDate}</span>
                   </div>
                   <div className="flex gap-2">
                     <Link href={`/activity/${activity.id}`} className="flex-1">
-                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">View Details</Button>
+                      <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white">View Details</Button>
                     </Link>
                     <Button
                       variant="outline"

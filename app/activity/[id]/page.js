@@ -81,15 +81,15 @@ What's included:
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Breadcrumb */}
         <nav className="mb-8 animate-fadeInUp">
           <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-orange-500">
+            <Link href="/" className="hover:text-coral-500">
               Home
             </Link>
             <span>/</span>
-            <Link href="/browse" className="hover:text-orange-500">
+            <Link href="/browse" className="hover:text-coral-500">
               Browse Activities
             </Link>
             <span>/</span>
@@ -134,7 +134,7 @@ What's included:
                       key={index}
                       onClick={() => setSelectedImage(index)}
                       className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                        selectedImage === index ? "border-orange-500" : "border-gray-200"
+                        selectedImage === index ? "border-coral-500" : "border-gray-200"
                       }`}
                     >
                       <img
@@ -160,14 +160,14 @@ What's included:
                         <span className="text-lg font-semibold ml-1">{activity.rating}</span>
                         <span className="text-gray-600 ml-1">({activity.reviewCount} reviews)</span>
                       </div>
-                      <span className="text-3xl font-bold text-orange-500">{activity.price}</span>
+                      <span className="text-3xl font-bold text-coral-500">{activity.price}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 p-6 bg-gray-50 rounded-xl">
                   <div className="text-center">
-                    <Users className="h-8 w-8 text-orange-500 mx-auto mb-2" />
+                    <Users className="h-8 w-8 text-coral-500 mx-auto mb-2" />
                     <div className="font-semibold text-gray-900">Ages {activity.ageRange}</div>
                     <div className="text-sm text-gray-600">Target age group</div>
                   </div>
@@ -231,8 +231,8 @@ What's included:
                     <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                            <span className="font-semibold text-orange-600">{review.name.charAt(0)}</span>
+                          <div className="w-10 h-10 bg-coral-100 rounded-full flex items-center justify-center">
+                            <span className="font-semibold text-coral-600">{review.name.charAt(0)}</span>
                           </div>
                           <div>
                             <div className="font-semibold text-gray-900">{review.name}</div>
@@ -264,7 +264,7 @@ What's included:
             <Card className="sticky top-24 animate-slideInRight">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">{activity.price}</div>
+                  <div className="text-3xl font-bold text-coral-500 mb-2">{activity.price}</div>
                   <div className="text-gray-600">per class</div>
                 </div>
 
@@ -284,13 +284,13 @@ What's included:
                 </div>
 
                 <div className="space-y-3">
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white p-4 text-lg font-semibold">
+                  <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white p-4 text-lg font-semibold">
                     <Calendar className="h-5 w-5 mr-2" />
                     Book Now
                   </Button>
                   <Button
                     variant="outline"
-                    className="w-full border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent p-4"
+                    className="w-full border-coral-500 text-coral-500 hover:bg-coral-50 bg-transparent p-4"
                   >
                     <MessageSquare className="h-5 w-5 mr-2" />
                     Message Provider

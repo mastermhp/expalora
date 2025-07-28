@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X, Heart, Bell, User, LogOut, Settings, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -9,8 +9,17 @@ import { useRouter } from "next/navigation"
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const { user, logout } = useAuth()
   const router = useRouter()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleLogout = () => {
     logout()
@@ -47,34 +56,41 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "glass-card shadow-2xl backdrop-blur-xl" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-18 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-              <img src="/lg.jpeg"/>
-            </div>
-            {/* <span className="text-2xl font-bold gradient-text">Expalora</span> */}
+          <Link href="/" className="flex items-center space-x-3 hover-lift">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-07-26%20at%2012.27.35%E2%80%AFAM-VI9v0uQYGi5bdGeWKqMOS0Sosxxcw2.png"
+              alt="Expalora Logo"
+              className="h-14 w-auto hover-glow transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">
-              Home
-            </Link>
-            <Link href="/browse" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">
-              Browse Activities
-            </Link>
-            <Link href="/list-activity" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">
-              List Activity
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-orange-500 font-medium transition-colors">
-              Contact
-            </Link>
+            {[
+              { href: "/", label: "Home" },
+              { href: "/browse", label: "Browse" },
+              { href: "/about", label: "About" },
+              { href: "/contact", label: "Contact" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`font-medium transition-all duration-300 hover-lift relative group ${
+                  isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                }`}
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-rose-500 to-rose-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            ))}
           </nav>
 
           {/* User Actions */}
@@ -84,15 +100,27 @@ export default function Header() {
                 {/* User-specific navigation */}
                 {user.type === "user" && (
                   <>
-                    <Link href="/favorites" className="text-gray-700 hover:text-orange-500 transition-colors">
-                      <Heart className="h-6 w-6" />
+                    <Link
+                      href="/favorites"
+                      className={`transition-colors hover-lift ${
+                        isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                      }`}
+                    >
+                      <div className="relative">
+                        <Heart className="h-6 w-6" />
+                        <span className="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                          3
+                        </span>
+                      </div>
                     </Link>
                     <Link
                       href="/notifications"
-                      className="text-gray-700 hover:text-orange-500 transition-colors relative"
+                      className={`transition-colors hover-lift relative ${
+                        isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                      }`}
                     >
                       <Bell className="h-6 w-6" />
-                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      <span className="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
                         3
                       </span>
                     </Link>
@@ -103,18 +131,20 @@ export default function Header() {
                 <div className="relative">
                   <button
                     onClick={() => setIsProfileOpen(!isProfileOpen)}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-orange-500 transition-colors"
+                    className={`flex items-center space-x-2 transition-colors hover-lift ${
+                      isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                    }`}
                   >
                     <img
                       src={user.avatar || "/placeholder.svg"}
                       alt={user.name}
-                      className="w-8 h-8 rounded-full object-cover border-2 border-orange-200"
+                      className="w-10 h-10 rounded-full object-cover border-2 border-rose-200 hover-glow"
                     />
                     <span className="font-medium">{user.name}</span>
                   </button>
 
                   {isProfileOpen && (
-                    <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute right-0 mt-2 w-64 glass-card rounded-2xl shadow-2xl border border-white/20 py-2 z-50 bg-white animate-scaleIn">
                       <div className="px-4 py-3 border-b border-gray-100">
                         <div className="flex items-center space-x-3">
                           <img
@@ -125,7 +155,7 @@ export default function Header() {
                           <div>
                             <div className="font-semibold text-gray-900">{user.name}</div>
                             <div className="text-sm text-gray-500">{user.email}</div>
-                            <div className="text-xs text-orange-500 font-medium">{getUserTypeLabel()}</div>
+                            <div className="text-xs text-rose-500 font-medium">{getUserTypeLabel()}</div>
                           </div>
                         </div>
                       </div>
@@ -133,7 +163,7 @@ export default function Header() {
                       <div className="py-2">
                         <Link
                           href={getDashboardLink()}
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors"
                           onClick={() => setIsProfileOpen(false)}
                         >
                           <User className="h-4 w-4 mr-3" />
@@ -144,7 +174,7 @@ export default function Header() {
                           <>
                             <Link
                               href="/favorites"
-                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors"
                               onClick={() => setIsProfileOpen(false)}
                             >
                               <Heart className="h-4 w-4 mr-3" />
@@ -152,7 +182,7 @@ export default function Header() {
                             </Link>
                             <Link
                               href="/notifications"
-                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                              className="flex items-center px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors"
                               onClick={() => setIsProfileOpen(false)}
                             >
                               <Bell className="h-4 w-4 mr-3" />
@@ -167,7 +197,7 @@ export default function Header() {
                         {user.type === "provider" && (
                           <Link
                             href="/provider-dashboard"
-                            className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                            className="flex items-center px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors"
                             onClick={() => setIsProfileOpen(false)}
                           >
                             <Calendar className="h-4 w-4 mr-3" />
@@ -177,7 +207,7 @@ export default function Header() {
 
                         <Link
                           href="/settings"
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors"
                           onClick={() => setIsProfileOpen(false)}
                         >
                           <Settings className="h-4 w-4 mr-3" />
@@ -201,13 +231,17 @@ export default function Header() {
                 <Link href="/auth/signin">
                   <Button
                     variant="outline"
-                    className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent"
+                    className={`border-2 hover-lift transition-all duration-300 ${
+                      isScrolled
+                        ? "border-rose-500 text-white hover:bg-rose-50 bg-transparent"
+                        : "border-coral-500 text-coral-500  hover:text-white bg-transparent"
+                    }`}
                   >
                     Sign In
                   </Button>
                 </Link>
                 <Link href="/auth/signup">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">Sign Up</Button>
+                  <Button className="bg-coral-500 px-6 py-3 rounded-xl hover-lift">Sign Up</Button>
                 </Link>
               </>
             )}
@@ -217,7 +251,9 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-orange-500 transition-colors"
+              className={`transition-colors hover-lift ${
+                isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+              }`}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -226,46 +262,28 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 animate-slideDown">
+          <div className="md:hidden py-4 border-t border-white/20 animate-slideDown glass">
             <nav className="flex flex-col space-y-4">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                href="/browse"
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Browse Activities
-              </Link>
-              <Link
-                href="/list-activity"
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                List Activity
-              </Link>
-              <Link
-                href="/about"
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
+              {[
+                { href: "/", label: "Home" },
+                { href: "/browse", label: "Browse" },
+                { href: "/about", label: "About" },
+                { href: "/contact", label: "Contact" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`font-medium transition-colors hover-lift ${
+                    isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
 
               {user ? (
-                <div className="pt-4 border-t border-gray-200">
+                <div className="pt-4 border-t border-white/20">
                   <div className="flex items-center space-x-3 mb-4">
                     <img
                       src={user.avatar || "/placeholder.svg"}
@@ -273,14 +291,16 @@ export default function Header() {
                       className="w-10 h-10 rounded-full object-cover"
                     />
                     <div>
-                      <div className="font-semibold text-gray-900">{user.name}</div>
-                      <div className="text-sm text-orange-500">{getUserTypeLabel()}</div>
+                      <div className={`font-semibold ${isScrolled ? "text-gray-900" : "text-white"}`}>{user.name}</div>
+                      <div className="text-sm text-rose-500">{getUserTypeLabel()}</div>
                     </div>
                   </div>
 
                   <Link
                     href={getDashboardLink()}
-                    className="block text-gray-700 hover:text-orange-500 font-medium transition-colors mb-2"
+                    className={`block font-medium transition-colors mb-2 hover-lift ${
+                      isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Dashboard
@@ -290,14 +310,18 @@ export default function Header() {
                     <>
                       <Link
                         href="/favorites"
-                        className="block text-gray-700 hover:text-orange-500 font-medium transition-colors mb-2"
+                        className={`block font-medium transition-colors mb-2 hover-lift ${
+                          isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                        }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Favorites
                       </Link>
                       <Link
                         href="/notifications"
-                        className="block text-gray-700 hover:text-orange-500 font-medium transition-colors mb-2"
+                        className={`block font-medium transition-colors mb-2 hover-lift ${
+                          isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                        }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Notifications
@@ -313,17 +337,21 @@ export default function Header() {
                   </button>
                 </div>
               ) : (
-                <div className="pt-4 border-t border-gray-200 space-y-2">
+                <div className="pt-4 border-t border-white/20 space-y-2">
                   <Link href="/auth/signin" onClick={() => setIsMenuOpen(false)}>
                     <Button
                       variant="outline"
-                      className="w-full border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent"
+                      className={`w-full border-2 transition-all ${
+                        isScrolled
+                          ? "border-rose-500 text-rose-500 hover:bg-rose-50 bg-transparent"
+                          : "border-white/50 text-white hover:bg-white/20 bg-transparent"
+                      }`}
                     >
                       Sign In
                     </Button>
                   </Link>
                   <Link href="/auth/signup" onClick={() => setIsMenuOpen(false)}>
-                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Sign Up</Button>
+                    <Button className="w-full btn-primary">Sign Up</Button>
                   </Link>
                 </div>
               )}

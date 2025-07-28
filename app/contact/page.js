@@ -11,7 +11,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 to-white py-20">
+      <section className="bg-gradient-to-br from-coral-50 to-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fadeInUp">
             Get in <span className="gradient-text">Touch</span>
@@ -36,14 +36,14 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
                     <Input
                       placeholder="Your first name"
-                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
                     <Input
                       placeholder="Your last name"
-                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -53,13 +53,13 @@ export default function ContactPage() {
                   <Input
                     type="email"
                     placeholder="your.email@example.com"
-                    className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Subject *</label>
-                  <select className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                  <select className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent">
                     <option>Select a subject</option>
                     <option>General Inquiry</option>
                     <option>Provider Support</option>
@@ -74,11 +74,11 @@ export default function ContactPage() {
                   <textarea
                     placeholder="Tell us how we can help you..."
                     rows={6}
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent resize-none"
                   />
                 </div>
 
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white p-4 text-lg font-semibold">
+                <Button className="w-full bg-coral-500 hover:bg-coral-600 text-white p-4 text-lg font-semibold">
                   Send Message
                 </Button>
               </CardContent>
@@ -91,15 +91,15 @@ export default function ContactPage() {
               <Card className="hover-scale">
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-orange-100 rounded-full p-3">
-                      <Mail className="h-6 w-6 text-orange-500" />
+                    <div className="bg-coral-100 rounded-full p-3">
+                      <Mail className="h-6 w-6 text-coral-500" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
                       <p className="text-gray-600 mb-2">Send us an email and weIt&apos;ll get back to you within 24 hours.</p>
                       <a
                         href="mailto:info@expalora.com"
-                        className="text-orange-500 hover:text-orange-600 font-semibold"
+                        className="text-coral-500 hover:text-coral-600 font-semibold"
                       >
                         info@expalora.com
                       </a>

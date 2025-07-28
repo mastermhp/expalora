@@ -56,7 +56,7 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-coral-50 to-white">
       <Header />
 
       <div className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -64,27 +64,27 @@ export default function SignInPage() {
           <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-4 mb-8">
               {/* <h2 className="text-4xl font-bold text-gray-900 mb-2">Join </h2> */}
-              <img src="/lg.jpeg" className="w-32 h-32 border border-orange-500 rounded-full" />
+              <img src="/lg.jpeg" className="w-32 h-32 border border-coral-500 rounded-full" />
             </div>
             {/* <h2 className="text-4xl font-bold text-gray-900 mb-2">Welcome back!</h2> */}
             <p className="text-gray-600">Sign in to your Expalora account</p>
           </div>
 
           {/* Demo Login Section */}
-          <Card className="shadow-2xl border-0 animate-slideInLeft bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+          <Card className="shadow-2xl border-0 animate-slideInLeft bg-gradient-to-br from-coral-500 to-coral-600 text-white">
             <CardHeader className="text-center pb-4">
               <CardTitle className="text-2xl text-white">🎭 Demo Login</CardTitle>
-              <p className="text-orange-100 text-sm">Try different user experiences</p>
+              <p className="text-coral-100 text-sm">Try different user experiences</p>
             </CardHeader>
             <CardContent className="space-y-4 p-6">
               <Button
                 onClick={() => handleDemoLogin("user")}
                 disabled={isLoading}
-                className="w-full bg-white text-orange-600 hover:bg-orange-50 p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="w-full bg-white text-coral-600 hover:bg-coral-50 p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 <User className="h-5 w-5 mr-3" />
                 Login as Family User
-                <div className="text-xs text-orange-500 ml-auto">Sarah Johnson</div>
+                <div className="text-xs text-coral-500 ml-auto">Sarah Johnson</div>
               </Button>
 
               <Button
@@ -110,7 +110,7 @@ export default function SignInPage() {
               {isLoading && (
                 <div className="text-center py-2">
                   <div className="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
-                  <p className="text-orange-100 text-sm mt-2">Logging you in...</p>
+                  <p className="text-coral-100 text-sm mt-2">Logging you in...</p>
                 </div>
               )}
             </CardContent>
@@ -132,7 +132,7 @@ export default function SignInPage() {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                   </div>
@@ -147,7 +147,7 @@ export default function SignInPage() {
                       placeholder="Enter your password"
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                     <button
@@ -167,20 +167,20 @@ export default function SignInPage() {
                       id="remember-me"
                       checked={formData.rememberMe}
                       onChange={(e) => setFormData({ ...formData, rememberMe: e.target.checked })}
-                      className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                     />
                     <label htmlFor="remember-me" className="ml-2 text-sm text-gray-600">
                       Remember me
                     </label>
                   </div>
-                  <Link href="/auth/forgot-password" className="text-sm text-orange-500 hover:text-orange-600">
+                  <Link href="/auth/forgot-password" className="text-sm text-coral-500 hover:text-coral-600">
                     Forgot password?
                   </Link>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-white p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                 >
                   Sign In
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -199,7 +199,7 @@ export default function SignInPage() {
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   variant="outline"
-                  className="border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 bg-transparent p-4 rounded-xl transition-all"
+                  className="border-2 border-gray-200 hover:border-coral-500 hover:bg-coral-50 bg-transparent p-4 rounded-xl transition-all"
                 >
                   <img
                     src="https://developers.google.com/identity/images/g-logo.png"
@@ -210,7 +210,7 @@ export default function SignInPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 bg-transparent p-4 rounded-xl transition-all"
+                  className="border-2 border-gray-200 hover:border-coral-500 hover:bg-coral-50 bg-transparent p-4 rounded-xl transition-all"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
@@ -224,7 +224,7 @@ export default function SignInPage() {
               <div className="text-center">
                 <p className="text-gray-600">
                   DonIt&apos;t have an account?{" "}
-                  <Link href="/auth/signup" className="text-orange-500 hover:text-orange-600 font-semibold">
+                  <Link href="/auth/signup" className="text-coral-500 hover:text-coral-600 font-semibold">
                     Sign up here
                   </Link>
                 </p>

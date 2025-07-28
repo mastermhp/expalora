@@ -28,7 +28,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-coral-50 to-white">
       <Header />
 
       <div className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export default function SignUpPage() {
           <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-4 mb-8">
               {/* <h2 className="text-4xl font-bold text-gray-900 mb-2">Join </h2> */}
-              <img src="/lg.jpeg" className="w-32 h-32 border border-orange-500 rounded-full" />
+              <img src="/lg.jpeg" className="w-32 h-32 border border-coral-500 rounded-full" />
             </div>
             <p className="text-gray-600">
               Create your account and start exploring
@@ -59,8 +59,8 @@ export default function SignUpPage() {
                     onClick={() => setUserType("family")}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       userType === "family"
-                        ? "border-orange-500 bg-orange-50 text-orange-700"
-                        : "border-gray-200 hover:border-orange-300"
+                        ? "border-coral-500 bg-coral-50 text-coral-700"
+                        : "border-gray-200 hover:border-coral-300"
                     }`}
                   >
                     <Users className="h-6 w-6 mx-auto mb-2" />
@@ -74,8 +74,8 @@ export default function SignUpPage() {
                     onClick={() => setUserType("provider")}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       userType === "provider"
-                        ? "border-orange-500 bg-orange-50 text-orange-700"
-                        : "border-gray-200 hover:border-orange-300"
+                        ? "border-coral-500 bg-coral-50 text-coral-700"
+                        : "border-gray-200 hover:border-coral-300"
                     }`}
                   >
                     <User className="h-6 w-6 mx-auto mb-2" />
@@ -100,7 +100,7 @@ export default function SignUpPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, firstName: e.target.value })
                       }
-                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                   </div>
@@ -115,7 +115,7 @@ export default function SignUpPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, lastName: e.target.value })
                       }
-                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                   </div>
@@ -134,7 +134,7 @@ export default function SignUpPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                   </div>
@@ -153,7 +153,7 @@ export default function SignUpPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })
                       }
-                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                     <button
@@ -186,7 +186,7 @@ export default function SignUpPage() {
                           confirmPassword: e.target.value,
                         })
                       }
-                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      className="pl-10 pr-10 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-coral-500 focus:border-transparent transition-all"
                       required
                     />
                     <button
@@ -216,7 +216,7 @@ export default function SignUpPage() {
                         agreeToTerms: e.target.checked,
                       })
                     }
-                    className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-coral-500 focus:ring-coral-500 border-gray-300 rounded"
                     required
                   />
                   <label
@@ -226,14 +226,14 @@ export default function SignUpPage() {
                     I agree to the{" "}
                     <Link
                       href="/terms"
-                      className="text-orange-500 hover:text-orange-600"
+                      className="text-coral-500 hover:text-coral-600"
                     >
                       Terms of Service
                     </Link>{" "}
                     and{" "}
                     <Link
                       href="/privacy"
-                      className="text-orange-500 hover:text-orange-600"
+                      className="text-coral-500 hover:text-coral-600"
                     >
                       Privacy Policy
                     </Link>
@@ -242,7 +242,7 @@ export default function SignUpPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-coral-500 to-coral-600 hover:from-coral-600 hover:to-coral-700 text-white p-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                 >
                   Create Account
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -263,7 +263,7 @@ export default function SignUpPage() {
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   variant="outline"
-                  className="border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 bg-transparent p-4 rounded-xl transition-all"
+                  className="border-2 border-gray-200 hover:border-coral-500 hover:bg-coral-50 bg-transparent p-4 rounded-xl transition-all"
                 >
                   <img
                     src="https://developers.google.com/identity/images/g-logo.png"
@@ -274,7 +274,7 @@ export default function SignUpPage() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 bg-transparent p-4 rounded-xl transition-all"
+                  className="border-2 border-gray-200 hover:border-coral-500 hover:bg-coral-50 bg-transparent p-4 rounded-xl transition-all"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
@@ -290,7 +290,7 @@ export default function SignUpPage() {
                   Already have an account?{" "}
                   <Link
                     href="/auth/signin"
-                    className="text-orange-500 hover:text-orange-600 font-semibold"
+                    className="text-coral-500 hover:text-coral-600 font-semibold"
                   >
                     Sign in here
                   </Link>
