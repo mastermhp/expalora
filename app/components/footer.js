@@ -238,13 +238,13 @@ export default function Footer() {
             />
           </Link>
           <p className="text-gray-600 text-sm text-center md:text-right">
-            Copyright © LocalListing X | Designed by{" "}
+            Copyright © Expalora | All rights reserved{" "}
             <a href="#" className="text-coral-500 hover:underline">
-              BRIX Templates
+              2025
             </a>{" "}
             - Powered by{" "}
             <a href="#" className="text-coral-500 hover:underline">
-              Webflow
+              Expalora
             </a>
           </p>
         </div>

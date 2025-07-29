@@ -84,7 +84,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`font-medium transition-all duration-300 hover-lift relative group ${
-                  isScrolled ? "text-gray-700 hover:text-rose-500" : "text-white hover:text-rose-200"
+                  isScrolled ? "text-gray-700 hover:text-coral-500" : "text-coral-500 hover:text-rose-200"
                 }`}
               >
                 {item.label}
@@ -233,7 +233,7 @@ export default function Header() {
                     variant="outline"
                     className={`border-2 hover-lift transition-all duration-300 ${
                       isScrolled
-                        ? "border-rose-500 text-white hover:bg-rose-50 bg-transparent"
+                        ? "border-rose-500 text-coral-500 hover:bg-rose-50 bg-transparent"
                         : "border-coral-500 text-coral-500  hover:text-white bg-transparent"
                     }`}
                   >
