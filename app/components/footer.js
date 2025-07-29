@@ -133,7 +133,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-gray-600 hover:text-coral-500 transition-colors">
-                  More Webflow Templates →
+                  More Templates →
                 </Link>
               </li>
             </ul>
