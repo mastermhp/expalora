@@ -217,7 +217,7 @@ export default function Footer() {
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="pl-12 md:w-64 p-3 rounded-lg border-none bg-white/10 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-coral-500"
+                  className="pl-12 md:w-64 rounded-lg border-none bg-white/10 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-coral-500"
                 />
               </div>
               <Button className="bg-coral-500 hover:bg-coral-600 text-white px-6 py-3 rounded-lg font-medium">
